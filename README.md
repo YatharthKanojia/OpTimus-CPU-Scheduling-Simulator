@@ -1,37 +1,48 @@
-INTRODUCTION: 
-OpTimus is a web-based CPU Scheduling Simulator built with Flask, Socket.IO, and Selenium that helps users visualize how various CPU scheduling algorithms work in real-time. This educational tool simulates how processes are managed by the CPU using algorithms like FCFS, SJF, Priority Scheduling, and Round Robin. It opens a new Chrome tab for each simulated process to give a visual cue of process execution.
+# OpTimus – CPU Scheduling Simulator
+
+**OpTimus** is a web-based CPU Scheduling Simulator built with **Flask**, **Socket.IO**, and **Selenium** that helps users visualize how various CPU scheduling algorithms work in real-time. This educational tool simulates how processes are managed by the CPU using algorithms like **FCFS**, **SJF**, **Priority Scheduling**, and **Round Robin**. It opens a new Chrome tab for each simulated process to give a visual cue of process execution.
 
 It is useful for students, educators, and developers who want to understand or demonstrate process scheduling concepts in operating systems.
 
-FEATURES:
-* Add custom processes with:Process ID
-  **Arrival Time
-  **Burst Time
-  **Priority
+---
 
-*Supports major CPU scheduling algorithms:
-  **First-Come-First-Serve (FCFS)
-  **Shortest Job First (SJF)
-  **Round Robin (with configurable time quantum)
-  **Priority Scheduling
+## 🚀 Features
 
-*Real-time simulation using Chrome tabs to represent process execution
+- Add custom processes with:
+  - **Process ID**
+  - **Arrival Time**
+  - **Burst Time**
+  - **Priority**
 
-*Real-time logging and status updates using Flask-SocketIO
+- Supports major CPU scheduling algorithms:
+  - **First-Come-First-Serve (FCFS)**
+  - **Shortest Job First (SJF)**
+  - **Round Robin** (with configurable time quantum)
+  - **Priority Scheduling**
 
-*Results page showing:
-  **Waiting Time
-  **Turnaround Time
-  **Start and Completion Time
-  **CPU Utilization
-  
-*Reset and clear functionality for clean re-execution
+- Real-time simulation using Chrome tabs to represent process execution
 
-PREREQUISITES:
-*Python 3.8+
-*Google Chrome Browser
-*Google ChromeDriver (must be compatible with your Chrome version)
-*Python Packages
+- Real-time logging and status updates using **Flask-SocketIO**
+
+- Results page showing:
+  - **Waiting Time**
+  - **Turnaround Time**
+  - **Start and Completion Time**
+  - **CPU Utilization**
+
+- Reset and clear functionality for clean re-execution
+
+---
+
+## 📦 Prerequisites
+
+- Python 3.8+
+- Google Chrome Browser
+- Google ChromeDriver (must be compatible with your Chrome version)
+- Python Packages:
+  ```bash
+  pip install flask flask-socketio selenium
+
 
 EXPLANATION OF EACH FILE:
 *main.py:
