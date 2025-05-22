@@ -44,52 +44,53 @@ It is useful for students, educators, and developers who want to understand or d
   pip install flask flask-socketio selenium
 
 
-EXPLANATION OF EACH FILE:
-*main.py:
-  **The Flask application entry point.
-  **Hosts the main endpoints:
-    **/add_process – Add a new process
-    **/start – Start the scheduling
-    **/results – Fetch result data
-    **/reset – Reset the scheduler
-  **Serves index.html and result.html
-  **Uses SocketIO to emit real-time logs and events to the front-end.
+## 📁 Explanation of Each File
 
-*process.py:
-  **Defines the DummyProcess class.
-  **Each process is simulated using:
-    **A background thread
-    **A Selenium-controlled Chrome tab (for visual representation)
-  **Includes logic to:
-    **Start
-    **Pause
-    **Resume
-    **Terminate Chrome tabs
-  **This simulates the "execution" of a process in an OS environment.
+### `main.py`
+- The Flask application entry point.
+- Hosts the main endpoints:
+  - `/add_process` – Add a new process
+  - `/start` – Start the scheduling
+  - `/results` – Fetch result data
+  - `/reset` – Reset the scheduler
+- Serves `index.html` and `result.html`
+- Uses SocketIO to emit real-time logs and events to the front-end.
 
-*scheduler.py:
-  **Contains the core logic for CPU scheduling.
-  **Defines the Scheduler class with methods for:
-    **FCFS
-    **SJF
-    **Priority Scheduling
-    **Round Robin (with time quantum and preemption)
-  **Executes processes in the correct order and logs timing info.
+### `process.py`
+- Defines the `DummyProcess` class.
+- Each process is simulated using:
+  - A background thread
+  - A Selenium-controlled Chrome tab (for visual representation)
+- Includes logic to:
+  - Start
+  - Pause
+  - Resume
+  - Terminate Chrome tabs
+- This simulates the "execution" of a process in an OS environment.
 
-*index.html:
-  **Front-end UI to interact with the scheduler.
-  **Built with Bootstrap 5 and vanilla JS.
-  **Features:
-    **Add process form
-    **Algorithm selector
-    **Time quantum input (conditionally shown)
-    **Process queue viewer
-    **Start/reset button.
-    **Live logs via Socket.IO
+### `scheduler.py`
+- Contains the core logic for CPU scheduling.
+- Defines the `Scheduler` class with methods for:
+  - FCFS
+  - SJF
+  - Priority Scheduling
+  - Round Robin (with time quantum and preemption)
+- Executes processes in the correct order and logs timing info.
 
-*result.html:
-  **Displays scheduling results in a tabular format.
-  **Pulls data from the /results API.
-  **Presents:
-    **Process execution metrics
-    **A basic structure for adding Gantt Chart visuals if needed
+### `index.html`
+- Front-end UI to interact with the scheduler.
+- Built with Bootstrap 5 and vanilla JavaScript.
+- Features:
+  - Add process form
+  - Algorithm selector
+  - Time quantum input (conditionally shown)
+  - Process queue viewer
+  - Start/reset button
+  - Live logs via Socket.IO
+
+### `result.html`
+- Displays scheduling results in a tabular format.
+- Pulls data from the `/results` API.
+- Presents:
+  - Process execution metrics
+  - A basic structure for adding Gantt Chart visuals if needed
